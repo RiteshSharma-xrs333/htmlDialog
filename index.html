@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Dialog tag use</title>
+</head>
+<body>
+  <button id="showModal">Show Proposal</button>
+  <dialog id="demo-modal">
+    <h3 class="modal-header">Hello Friend</h3>
+    <div class="modal-body">
+      <p>Finally, I have found a way to send an interactive way to show a message.</p>
+      <p>Abhi to party shuru huyi hai.</p>
+    </div>
+    <footer class="modal-footer">
+      <button id="close" type="button">close</button>
+    </footer>
+  </dialog>
+</body>
+<script>
+  const modal = document.querySelector('dialog')
+  const showModal = document.getElementById('showModal');
+  const closeModal = document.getElementById('close');
+
+  showModal.addEventListener('click', function() {
+    modal.showModal();
+  }, false);
+
+  closeModal.addEventListener('click', function() {
+    modal.close();
+  }, false);
+
+</script>
+</html>
